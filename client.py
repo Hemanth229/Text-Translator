@@ -21,7 +21,7 @@ def receive_messages():
 def send_messages():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     while True:
-        msg = input()
+        msg = input("Please enter")
         full_msg = f"{USERNAME}: {msg}"
         sock.sendto(full_msg.encode(), (MULTICAST_GROUP, PORT))
 
